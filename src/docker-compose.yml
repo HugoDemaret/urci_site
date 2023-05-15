@@ -1,0 +1,10 @@
+version: '3'
+services:
+      urci-cats:
+            container_name: urci-website
+            build:
+                  context: .
+                  dockerfile: Dockerfile
+            restart: unless-stopped
+            volumes:
+                  - ./website:/var/www/html
